@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  #sobre {
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  #invitacion {
+    max-width: 90%;
+    max-height: 90%;
+    transform: scale(0);
+    transition: transform 0.6s ease;
+    transform-origin: center;
+    position: absolute;
+  }
+</style>
+</head>
+<body>
+
+<img id="sobre" src="png-transparent-letter-cleaner-icon.png" alt="Sobre" width="200">
+<!-- Asegúrate de reemplazar la siguiente URL con la de tu invitación real -->
+<img id="invitacion" src="Momentum.png" alt="Invitación">
+
+<script>
+  document.getElementById('sobre').onclick = function() {
+    var invitacion = document.getElementById('invitacion');
+    var sobre = document.getElementById('sobre');
+    sobre.style.opacity = 0;
+    sobre.style.transform = 'scale(0)';
+    invitacion.style.transform = 'scale(1)';
+  };
+</script>
+
+</body>
+</html>
